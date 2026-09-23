@@ -793,3 +793,10 @@ h2.section-title { font-size: var(--fs-h2); margin-bottom: 24px; }
 .copyright-link:hover {
     color: var(--clr-orange);
 }
+
+/* CTA de manutenção dentro da seção #assistencia (22/09/2026).
+   A seção explicava o serviço e não tinha botão: quem chegava pelo anúncio
+   de conserto precisava rolar até #lojas pra achar onde chamar. */
+.support-actions {
+    margin-top: 40px;
+}
