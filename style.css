@@ -800,3 +800,46 @@ h2.section-title { font-size: var(--fs-h2); margin-bottom: 24px; }
 .support-actions {
     margin-top: 40px;
 }
+
+/* Horário logo abaixo dos botões do hero: responde "tem alguém lá agora?" antes do clique */
+.hero-horario {
+    font-size: 14px;
+    margin-top: 16px;
+}
+
+/* Barra fixa de WhatsApp, só no mobile, aparece depois que os botões do hero saem da tela */
+.sticky-wa {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .sticky-wa {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px 8px;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 50;
+        padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+        background: rgba(8, 8, 8, 0.92);
+        border-top: 1px solid var(--clr-glass-border);
+        transform: translateY(110%);
+        transition: transform 0.25s ease-out;
+    }
+    .sticky-wa.visivel { transform: translateY(0); }
+    .sticky-wa-label {
+        flex-basis: 100%;
+        font-size: 12px;
+        text-align: center;
+        color: var(--clr-gray);
+    }
+    .sticky-wa .btn {
+        flex: 1;
+        padding: 14px 8px;
+        font-size: 14px;
+        text-align: center;
+    }
+    .footer-section { padding-bottom: 120px; }
+}

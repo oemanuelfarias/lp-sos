@@ -66,6 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 var loja = this.getAttribute('data-track-loja') || 'desconhecida';
                 pushData.loja = loja;
                 pushData.button_text = this.textContent.trim();
+                pushData.origem = this.getAttribute('data-track-origem') || 'pagina';
             }
 
             // Para rota_sr e rota_sc, inclui o endereco
@@ -76,4 +77,14 @@ document.addEventListener('DOMContentLoaded', () => {
             dataLayer.push(pushData);
         });
     });
+
+    // Barra fixa: aparece quando os botões do hero saem da tela
+    var barra = document.querySelector('.sticky-wa');
+    var heroBtns = document.querySelector('.hero .btn-group');
+    if (barra && heroBtns && 'IntersectionObserver' in window) {
+        new IntersectionObserver(function (entries) {
+            var e = entries[0];
+            barra.classList.toggle('visivel', !e.isIntersecting && e.boundingClientRect.top < 0);
+        }).observe(heroBtns);
+    }
 });

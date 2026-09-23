@@ -21,6 +21,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://api.cqc.onpromedia.com.br">
+    <link rel="preconnect" href="https://api.whatsapp.com">
     <link rel="dns-prefetch" href="//s.tintim.app">
     <link rel="dns-prefetch" href="//images.unsplash.com">
     <link rel="preload" href="/.netlify/images?url=/images/Frame%2025.jpg&w=600&q=80" as="image">
@@ -29,7 +31,7 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Plus+Jakarta+Sans:wght@700&display=swap"
         rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=2">
+    <link rel="stylesheet" href="style.css?v=3">
     <script>
     (function(w,d,s){
         if(!w.cqc){
@@ -74,23 +76,23 @@
                     <img src="/.netlify/images?url=/images/Logo%20SOS%20png%20branco.png&w=400&q=100"
                         alt="SOS Celulares Logo" class="hero-logo" width="90" height="90" loading="eager"
                         fetchpriority="high">
-                    <div class="badge glassmorphism">🚀 Assistência & Vendas</div>
+                    <div class="badge glassmorphism">Santa Rosa e Santo Cristo · no centro</div>
                     <h1 class="headline">
-                        O seu celular estragou ou quer um aparelho <span class="text-orange">novinho?</span><br>A SOS
-                        Celulares resolve!
+                        Escolhe <span class="text-orange">hoje.</span><br>Sai com ele <span class="text-orange">hoje.</span>
                     </h1>
                     <p class="subheadline text-gray">
-                        Sua referência em vendas e assistência técnica especializada em Santa Rosa e Santo Cristo.
-                        Aparelhos, caixinhas de som, fones e consertos com agilidade e certificado de garantia.
+                        Você escolhe o celular na loja e sai com ele ligado, com seus contatos e fotos dentro, capa e
+                        película colocadas. Tem um usado parado? A gente avalia na hora e o valor entra na compra.
                     </p>
                     <div class="btn-group">
-                        <a href="https://api.cqc.onpromedia.com.br/t/8492847E"
+                        <a href="https://api.cqc.onpromedia.com.br/t/8492847E?text=Ol%C3%A1%2C%20vi%20o%20an%C3%BAncio%20e%20quero%20ver%20os%20celulares%20que%20voc%C3%AAs%20t%C3%AAm%20na%20loja"
                             target="_blank" class="btn btn-primary shadow-hover" data-track="whatsapp_click"
-                            data-track-loja="santa_rosa">Falar com loja Santa Rosa</a>
-                        <a href="https://api.cqc.onpromedia.com.br/t/13A5772A"
+                            data-track-loja="santa_rosa">Chamar a loja de Santa Rosa</a>
+                        <a href="https://api.cqc.onpromedia.com.br/t/13A5772A?text=Ol%C3%A1%2C%20vi%20o%20an%C3%BAncio%20e%20quero%20ver%20os%20celulares%20que%20voc%C3%AAs%20t%C3%AAm%20na%20loja"
                             target="_blank" class="btn btn-primary shadow-hover" data-track="whatsapp_click"
-                            data-track-loja="santo_cristo">Falar com loja Santo Cristo</a>
+                            data-track-loja="santo_cristo">Chamar a loja de Santo Cristo</a>
                     </div>
+                    <p class="hero-horario text-gray">Segunda a sexta, 8h30 às 18h.<br>Sábado, 8h30 às 12h.</p>
                 </div>
 
                 <div class="hero-media">
@@ -326,8 +328,17 @@
         </footer>
     </main>
 
+    <!-- Barra fixa no mobile: quem rola passa do hero e fica sem botão até #lojas -->
+    <nav class="sticky-wa" aria-label="Chamar no WhatsApp">
+        <span class="sticky-wa-label">Chamar no WhatsApp</span>
+        <a href="https://api.cqc.onpromedia.com.br/t/8492847E?text=Ol%C3%A1%2C%20vi%20o%20an%C3%BAncio%20e%20quero%20ver%20os%20celulares%20que%20voc%C3%AAs%20t%C3%AAm%20na%20loja" target="_blank" class="btn btn-primary"
+            data-track="whatsapp_click" data-track-loja="santa_rosa" data-track-origem="barra_fixa">Santa Rosa</a>
+        <a href="https://api.cqc.onpromedia.com.br/t/13A5772A?text=Ol%C3%A1%2C%20vi%20o%20an%C3%BAncio%20e%20quero%20ver%20os%20celulares%20que%20voc%C3%AAs%20t%C3%AAm%20na%20loja" target="_blank" class="btn btn-primary"
+            data-track="whatsapp_click" data-track-loja="santo_cristo" data-track-origem="barra_fixa">Santo Cristo</a>
+    </nav>
+
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="script.js?v=2" defer></script>
+    <script src="script.js?v=3" defer></script>
 </body>
 
 </html>
