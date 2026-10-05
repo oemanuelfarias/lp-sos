@@ -78,6 +78,18 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Quem veio de anúncio de manutenção recebe a mensagem de conserto em todos os botões.
+    // O botão do topo é de venda; sem isto, o lead de conserto abre o WhatsApp com "quero ver os celulares"
+    // e desiste (Unde, 05/10/2026: 18 cliques de manutenção nesse botão, 0 conversas).
+    var campanha = new URLSearchParams(location.search).get('utm_campaign') || '';
+    if (/manuten/i.test(campanha)) {
+        document.querySelectorAll('a[href*="chama.ascendyn.com.br/t/"]').forEach(function (a) {
+            var u = new URL(a.href);
+            u.searchParams.set('text', 'Olá, vim pelo anúncio de conserto e queria saber o orçamento.');
+            a.href = u.toString();
+        });
+    }
+
     // Barra fixa: aparece quando os botões do hero saem da tela
     var barra = document.querySelector('.sticky-wa');
     var heroBtns = document.querySelector('.hero .btn-group');
